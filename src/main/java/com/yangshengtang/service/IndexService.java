@@ -19,5 +19,10 @@ public class IndexService {
         return indexMapper.selectList();
     }
 
+    public int addInfo(Users users) {
+        return indexMapper.addInfo(users);
+    }
+
+
 
 }

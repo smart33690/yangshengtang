@@ -2,20 +2,25 @@ package com.yangshengtang.bean;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Table;
+import java.util.Date;
 
-@Table(name = "test")
+@Table(name = "count")
 @Data
 public class Users {
 
-    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "name")
+    // 用户名
     private String name;
 
-    @Column(name = "age")
-    private Integer age;
+    // 测试结果
+    private String result;
+
+    // 创建时间
+    private Date time;
+
+    // 创建时间
+    private String timeStr;
 
 }

@@ -10,4 +10,6 @@ import java.util.Map;
 public interface IndexMapper {
 
     List<Users> selectList();
+
+    int addInfo(Users users);
 }
