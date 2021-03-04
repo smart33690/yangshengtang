@@ -11,9 +11,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
+
 
 @Controller
 public class IndexController {
@@ -60,6 +60,7 @@ public class IndexController {
     @PostMapping("/addInfo")
     public void addInfo(@RequestBody Users users){
         if(users != null) {
+            users.setTime(new Date());
             indexService.addInfo(users);
         }
     }
