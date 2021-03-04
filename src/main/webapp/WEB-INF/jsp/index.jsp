@@ -152,43 +152,43 @@
         }
         if(index==1){
             //5个A超过3个 自信无畏
-            var title="result-tit2.png";
-            var desc="result-info2.png";
+            var title="images/result-tit2.png";
+            var desc="images/result-info2.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "自信无畏";
         }else if(index==2){
             //5道题选择B答案超过3个的 英姿煞爽
-            var title="result-tit6.png";
-            var desc="result-info6.png";
+            var title="images/result-tit6.png";
+            var desc="images/result-info6.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "英姿煞爽";
         }else if(index==3){
            // 5道题选择C答案超过3个的 幸福可期
-            var title="result-tit5.png";
-            var desc="result-info5.png";
+            var title="images/result-tit5.png";
+            var desc="images/result-info5.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "幸福可期";
         }else if(index==4){
             // 5道题选择A答案2个+B答案2个+C答案1个的 自在随性
-            var title="result-tit4.png";
-            var desc="result-info4.png";
+            var title="images/result-tit4.png";
+            var desc="images/result-info4.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "自在随性";
         }else if(index==5){
             // 道题选择B答案2个+C答案2个+A答案1个的 迷人体质
-            var title="result-tit1.png";
-            var desc="result-info1.png";
+            var title="images/result-tit1.png";
+            var desc="images/result-info1.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "迷人体质";
         }else if(index==6){
             // 道题选择A答案2个+C答案2个+B答案1个的 值得信赖
-            var title="result-tit3.png";
-            var desc="result-info3.png";
+            var title="images/result-tit3.png";
+            var desc="images/result-info3.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "值得信赖";
