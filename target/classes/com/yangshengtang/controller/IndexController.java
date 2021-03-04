@@ -7,21 +7,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class IndexController {
 
     @Autowired
     IndexService indexService;
+
+
+    @RequestMapping("{tencent3402030694212942369.txt}")
+    @ResponseBody
+    public String tencent3402030694212942369(){
+        return "10275257147560276768";
+    }
+
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
 
     /**
      * 查询后台数据
@@ -53,6 +61,7 @@ public class IndexController {
     @PostMapping("/addInfo")
     public void addInfo(@RequestBody Users users){
         if(users != null) {
+            users.setTime(new Date());
             indexService.addInfo(users);
         }
     }
