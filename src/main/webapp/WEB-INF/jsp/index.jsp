@@ -130,8 +130,25 @@
 </div>
 </body>
 <script type="text/javascript">
-    function getAnswer(index) {
 
+    function getAnswer(a) {
+        var A = a.length-a.replaceAll("A", "").length;
+        var B = a.length-a.replaceAll("B", "").length;
+        var C = a.length-a.replaceAll("C", "").length;
+        var index=1;
+        if(A>=3){
+            index=1;
+        }else if(B>=3){
+            index=2;
+        }else if(C>=3){
+            index=3;
+        }else if(A==2&&B==2&&C==1){
+            index=4;
+        }else if(A==1&&B==2&&C==2){
+            index=5;
+        }else if(A==2&&B==1&&C==2){
+            index=6;
+        }
         if(index==1){
             //5个A超过3个 自信无畏
             var title="result-tit2.png";
