@@ -66,4 +66,13 @@ public class IndexController {
     }
 
 
+    /**
+     * 首页
+     */
+    @RequestMapping("/index")
+    public String index(){
+      return "index";
+    }
+
+
 }

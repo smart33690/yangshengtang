@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.persistence.Table;
 import java.util.Date;
 
-@Table(name = "count")
+@Table(name = "users")
 @Data
 public class Users {
 

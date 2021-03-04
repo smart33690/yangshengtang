@@ -30,7 +30,7 @@
         <div class="f2-info f2-info2">
             <img src="images/f3-text.png" alt="" class="f2-text wow slideInDown" data-wow-duration="1s" data-wow-delay=".4s">
             <input type="text" class="f2-input wow slideInLeft" data-wow-duration="1s" data-wow-delay=".8s">
-            <img src="images/f3-btn.png" alt="" class="f2-btn wow bounceIn" data-wow-duration="1s" data-wow-delay=".8s" >
+            <img src="images/f3-btn.png" alt="" onclick="saveDate()" class="f2-btn wow bounceIn" data-wow-duration="1s" data-wow-delay=".8s" >
         </div>
         <img src="images/smallFlower.png" alt="" class="smallFlower slideInUp2">
         <img src="images/bigFlower.png" alt="" class="bigFlower slideInUp3">
@@ -208,6 +208,37 @@
             $("<div class='canvasImgWrap'><div class='canvasImgMask'></div></div>").append(imgWrap).appendTo("body");
             promptWindow("长按图片保存");
         });
+    }
+
+    // $("#username").click(function(){
+    function saveDate() {
+        // let oInput = document.queryCommandValue("#username");
+        var username =  $("#username").val;
+        console.log(username)
+        console.log("4234234")
+        var adata = {
+            "name": username()
+        };
+        var data = JSON.stringify(adata);
+        $.ajax({
+            type: "POST",
+            dataType: "json",//通过GET方式上传请求
+            contentType: "application/json",//上传内容格式为json结构
+            data: data,                                 //上传的参数
+            async: false,
+            url: "http://localhost:80/addInfo",     //请求的url。与后端@Request Mapping注解中的值一致。
+            success: function (data) {          //请求成功的回调函数
+                if (data.code === 0) {
+                    alert("成功");
+                    window.location.href = "success";
+                }
+            },
+            error: function (e) {           //请求失败的回调函数
+                console.log(e);
+            }
+        });
+        // });
+
     }
 </script>
 </html>

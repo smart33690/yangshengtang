@@ -1,6 +1,7 @@
 package com.yangshengtang.controller;
 
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.yangshengtang.bean.Users;
 import com.yangshengtang.service.IndexService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,23 +14,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+
 @Controller
 public class IndexController {
-
-    @Autowired
-    IndexService indexService;
-
 
     @RequestMapping("{tencent3402030694212942369.txt}")
     @ResponseBody
     public String tencent3402030694212942369(){
-        return "10275257147560276768";
+        return "17256225430242635088";
     }
-
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
-    }
+    @Autowired
+    IndexService indexService;
 
     /**
      * 查询后台数据
@@ -37,18 +32,22 @@ public class IndexController {
     @RequestMapping("/ystadmin")
     public String showUser(Model model,Integer pageNum, Integer pageSize){
         ModelMap modelMap = new ModelMap();
-        if((pageNum==null) || (pageSize == null)) {
+        if(pageNum==null) {
             pageNum = 1;
+        }
+        if(pageSize == null) {
             pageSize = 10;
         }
         PageHelper.startPage(pageNum,pageSize);
-        List<Users> list = indexService.selectList();
+        List<Users> list1 = indexService.selectList();
         //创建SimpleDateFormat对象，指定样式
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        for(Users user:list){
+        for(Users user:list1){
             user.setTimeStr(simpleDateFormat.format(user.getTime()));
-            System.out.println(user);
+
         }
+        PageInfo<Users> list= new PageInfo<Users>(list1);
+
         //需要一个 Model 对象
         model.addAttribute("list",list);
         //跳转视图
@@ -64,6 +63,15 @@ public class IndexController {
             users.setTime(new Date());
             indexService.addInfo(users);
         }
+    }
+
+
+    /**
+     * 首页
+     */
+    @RequestMapping("/index")
+    public String index(){
+      return "index";
     }
 
 
