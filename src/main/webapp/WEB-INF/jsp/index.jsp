@@ -29,7 +29,7 @@
         </div>
         <div class="f2-info f2-info2">
             <img src="images/f3-text.png" alt="" class="f2-text wow slideInDown" data-wow-duration="1s" data-wow-delay=".4s">
-            <input type="text" class="f2-input wow slideInLeft" data-wow-duration="1s" data-wow-delay=".8s">
+            <input id="username" name="username" type="text" class="f2-input wow slideInLeft" data-wow-duration="1s" data-wow-delay=".8s">
             <img src="images/f3-btn.png" alt="" onclick="saveDate()" class="f2-btn wow bounceIn" data-wow-duration="1s" data-wow-delay=".8s" >
         </div>
         <img src="images/smallFlower.png" alt="" class="smallFlower slideInUp2">
@@ -212,12 +212,10 @@
 
     // $("#username").click(function(){
     function saveDate() {
-        // let oInput = document.queryCommandValue("#username");
-        var username =  $("#username").val;
-        console.log(username)
-        console.log("4234234")
+        var value =  $("#username").val();
         var adata = {
-            "name": username()
+            "name": value,
+            "result":"美丽女神"
         };
         var data = JSON.stringify(adata);
         $.ajax({
