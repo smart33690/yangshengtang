@@ -5,7 +5,7 @@
         <!--插入数据-->
     <insert id="addInfo" keyColumn="id" keyProperty="id" parameterType="com.yangshengtang.bean.Users">
     insert into users (name, result, time)
-    values (#{name,jdbcType=VARCHAR},#{result,jdbcType=VARCHAR},#{time,jdbcType=TIMESTAMP})
+        values (#{name,jdbcType=VARCHAR},#{result,jdbcType=VARCHAR},#{time,jdbcType=TIMESTAMP})
     </insert>
 
 

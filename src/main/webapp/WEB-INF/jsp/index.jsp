@@ -30,7 +30,7 @@
         <div class="f2-info f2-info2">
             <img src="images/f3-text.png" alt="" class="f2-text wow slideInDown" data-wow-duration="1s" data-wow-delay=".4s">
             <input id="username" name="username" type="text" class="f2-input wow slideInLeft" data-wow-duration="1s" data-wow-delay=".8s">
-            <img src="images/f3-btn.png" alt="" onclick="saveDate()" class="f2-btn wow bounceIn" data-wow-duration="1s" data-wow-delay=".8s" >
+            <img src="images/f3-btn.png" alt=""  class="f2-btn wow bounceIn" data-wow-duration="1s" data-wow-delay=".8s" >
         </div>
         <img src="images/smallFlower.png" alt="" class="smallFlower slideInUp2">
         <img src="images/bigFlower.png" alt="" class="bigFlower slideInUp3">
@@ -308,6 +308,7 @@
         console.log(res)
         if(res.length == 5) {
             var resStr = getAnswer(res)
+            console.log(resStr)
             saveDate(resStr)
         }
     }
