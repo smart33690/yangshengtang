@@ -132,6 +132,7 @@
 <script type="text/javascript">
 
     function getAnswer(a) {
+        console.log(a)
         var A = a.length-a.replaceAll("A", "").length;
         var B = a.length-a.replaceAll("B", "").length;
         var C = a.length-a.replaceAll("C", "").length;
@@ -268,11 +269,11 @@
     }
 
     // $("#username").click(function(){
-    function saveDate() {
+    function saveDate(resStr) {
         var value =  $("#username").val();
         var adata = {
             "name": value,
-            "result":"美丽女神"
+            "result":resStr
         };
         var data = JSON.stringify(adata);
         $.ajax({
@@ -299,6 +300,10 @@
     function cal(str) {
         res += str;
         console.log(res)
+        if(res.length == 5) {
+            var resStr = getAnswer(res)
+            saveDate(resStr)
+        }
     }
 </script>
 </html>
