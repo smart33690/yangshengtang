@@ -39,41 +39,41 @@
         <div class="qs-info">
             <img src="images/qs-tit1.png" alt="" class="qs-tit1 wow bounceInUp" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="answer-con">
-                <img src="images/qs1-a.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
-                <img src="images/qs1-b.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
-                <img src="images/qs1-c.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
+                <img src="images/qs1-a.png" onclick="cal('A')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
+                <img src="images/qs1-b.png" onclick="cal('B')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
+                <img src="images/qs1-c.png" onclick="cal('C')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
             </div>
         </div>
         <div class="qs-info">
             <img src="images/qs-tit2.png" alt="" class="qs-tit1 wow bounceInUp" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="answer-con">
-                <img src="images/qs2-a.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
-                <img src="images/qs2-b.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
-                <img src="images/qs2-c.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
+                <img src="images/qs2-a.png"  onclick="cal('A')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
+                <img src="images/qs2-b.png"  onclick="cal('B')"  alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
+                <img src="images/qs2-c.png"  onclick="cal('C')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
             </div>
         </div>
         <div class="qs-info">
             <img src="images/qs-tit3.png" alt="" class="qs-tit wow bounceInUp" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="answer-con">
-                <img src="images/qs3-a.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
-                <img src="images/qs3-b.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
-                <img src="images/qs3-c.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
+                <img src="images/qs3-a.png"  onclick="cal('A')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
+                <img src="images/qs3-b.png"  onclick="cal('B')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
+                <img src="images/qs3-c.png"  onclick="cal('C')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
             </div>
         </div>
         <div class="qs-info">
             <img src="images/qs-tit4.png" alt="" class="qs-tit wow bounceInUp" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="answer-con">
-                <img src="images/qs4-a.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
-                <img src="images/qs4-b.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
-                <img src="images/qs4-c.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
+                <img src="images/qs4-a.png"  onclick="cal('A')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
+                <img src="images/qs4-b.png"  onclick="cal('B')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
+                <img src="images/qs4-c.png"  onclick="cal('C')" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
             </div>
         </div>
         <div class="qs-info">
             <img src="images/qs-tit5.png" alt="" class="qs-tit wow bounceInUp" data-wow-duration="1s" data-wow-delay=".8s">
             <div class="answer-con">
-                <img src="images/qs5-a.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
-                <img src="images/qs5-b.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
-                <img src="images/qs5-c.png" alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
+                <img src="images/qs5-a.png"  onclick="cal('A')"alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="2s">
+                <img src="images/qs5-b.png"  onclick="cal('B')"alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="3s">
+                <img src="images/qs5-c.png"  onclick="cal('C')"alt="" class="answer wow fadeInDown" data-wow-duration="1.2s" data-wow-delay="4s">
             </div>
         </div>
     </div>
@@ -198,6 +198,7 @@
 <script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/html2canvas.js"></script>
 <script type="text/javascript">
+    var res = '';
     $(function(){
         // 初始化动画
         var wow = new WOW({
@@ -253,8 +254,6 @@
             $(".imgNum").eq(i-1).attr("src","images/"+imgStr.substr(i-1, 1)+".png")
         }
 
-
-
     });
 
     //保存图片
@@ -301,6 +300,11 @@
         });
         // });
 
+    };
+
+    function cal(str) {
+        res += str;
+        console.log(res)
     }
 </script>
 </html>
