@@ -79,7 +79,7 @@
     </div>
     <div class="part part4 rotateIn wow">
         <div class="result-con">
-            <img src="images/result-tit1.png" alt="" class="resultTit fadeInDownBig wow" data-wow-duration="1s" data-wow-delay=".6s">
+            <img src="images/result-tit1.png"  id="an-title" alt="" class="resultTit fadeInDownBig wow" data-wow-duration="1s" data-wow-delay=".6s">
             <div class="progress-con">
                 <div class="item fadeInDown wow" data-wow-duration="1s" data-wow-delay="1.8s">
                     <p class="progress-num">
@@ -104,7 +104,7 @@
                         <img src="images/progress-bar.png" alt="" class="progress-bar">
                     </p>
                     <p class="progress-intro">
-                        <img src="images/zh.png" alt="">
+                        <img src="images/qz.png" alt="">
                     </p>
                 </div>
                 <div class="item fadeInDown wow" data-wow-duration="1s" data-wow-delay="3.5s">
@@ -117,21 +117,79 @@
                         <img src="images/progress-bar.png" alt="" class="progress-bar">
                     </p>
                     <p class="progress-intro">
-                        <img src="images/zh.png" alt="">
+                        <img src="images/ql.png" alt="">
                     </p>
                 </div>
             </div>
             <div class="result-intro fadeInUpBig wow" data-wow-duration="1s" data-wow-delay="4s">
-                <img src="images/result-info1.png" alt="">
+                <img src="images/result-info1.png" id="an-desc" alt="">
                 <!-- <span onclick="domShot()">zdfdddfs</span> -->
             </div>
         </div>
     </div>
 </div>
 </body>
+<script type="text/javascript">
 
+    function getAnswer(a) {
+        var A = a.length-a.replaceAll("A", "").length;
+        var B = a.length-a.replaceAll("B", "").length;
+        var C = a.length-a.replaceAll("C", "").length;
+        var index=1;
+        if(A>=3){
+            index=1;
+        }else if(B>=3){
+            index=2;
+        }else if(C>=3){
+            index=3;
+        }else if(A==2&&B==2&&C==1){
+            index=4;
+        }else if(A==1&&B==2&&C==2){
+            index=5;
+        }else if(A==2&&B==1&&C==2){
+            index=6;
+        }
+        if(index==1){
+            //5个A超过3个 自信无畏
+            var title="result-tit2.png";
+            var desc="result-info2.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }else if(index==2){
+            //5道题选择B答案超过3个的 英姿煞爽
+            var title="result-tit6.png";
+            var desc="result-info6.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }else if(index==3){
+           // 5道题选择C答案超过3个的 幸福可期
+            var title="result-tit5.png";
+            var desc="result-info5.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }else if(index==4){
+            // 5道题选择A答案2个+B答案2个+C答案1个的 自在随性
+            var title="result-tit4.png";
+            var desc="result-info4.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }else if(index==5){
+            // 道题选择B答案2个+C答案2个+A答案1个的 迷人体质
+            var title="result-tit1.png";
+            var desc="result-info1.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }else if(index==6){
+            // 道题选择A答案2个+C答案2个+B答案1个的 值得信赖
+            var title="result-tit3.png";
+            var desc="result-info3.png";
+            $("#an-title").attr("src",title);
+            $("#an-desc").attr("src",desc);
+        }
+    }
+</script>
 <script type="text/javascript" src="js/wow.js"></script>
-<script type="text/javascript" src="http://m.5pao.com/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/html2canvas.js"></script>
 <script type="text/javascript">
     var res = '';
@@ -223,7 +281,7 @@
             contentType: "application/json",//上传内容格式为json结构
             data: data,                                 //上传的参数
             async: false,
-            url: "http://localhost:80/addInfo",     //请求的url。与后端@Request Mapping注解中的值一致。
+            url: "/addInfo",     //请求的url。与后端@Request Mapping注解中的值一致。
             success: function (data) {          //请求成功的回调函数
                 if (data.code === 0) {
                     alert("成功");
