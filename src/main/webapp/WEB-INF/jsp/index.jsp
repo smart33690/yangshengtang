@@ -1,3 +1,4 @@
+<%--
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -180,15 +181,15 @@
             return "自在随性";
         }else if(index==5){
             // 道题选择B答案2个+C答案2个+A答案1个的 迷人体质
-            var title="images/result-tit1.png";
-            var desc="images/result-info1.png";
+            var title="images/result-tit3.png";
+            var desc="images/result-info3.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "迷人体质";
         }else if(index==6){
             // 道题选择A答案2个+C答案2个+B答案1个的 值得信赖
-            var title="images/result-tit3.png";
-            var desc="images/result-info3.png";
+            var title="images/result-tit1.png";
+            var desc="images/result-info1.png";
             $("#an-title").attr("src",title);
             $("#an-desc").attr("src",desc);
             return "值得信赖";
@@ -315,3 +316,4 @@
 </script>
 </html>
 
+--%>

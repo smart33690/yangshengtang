@@ -18,11 +18,11 @@ import java.util.List;
 @Controller
 public class IndexController {
 
-    @RequestMapping("{tencent3402030694212942369.txt}")
+    /*@RequestMapping("{tencent3402030694212942369.txt}")
     @ResponseBody
     public String tencent3402030694212942369(){
         return "17256225430242635088";
-    }
+    }*/
     @Autowired
     IndexService indexService;
 
